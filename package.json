@@ -3,6 +3,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "start": "webpack-dev-server --hot --open",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.1"
+    "webpack-cli": "^3.0.1",
+    "webpack-dev-server": "^3.1.7"
   }
 }

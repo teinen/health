@@ -3,6 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -27,6 +28,10 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src/')
     }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist/'),
+    port: 8080,
   },
   plugins: [
     new VueLoaderPlugin(),
