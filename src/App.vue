@@ -1,9 +1,7 @@
 <template>
   <div>
     <h1>Weight Data Graph</h1>
-    <div>
-      <p v-for="(value, key) in weights" :key="key">{{ key }}: {{ value }}</p>
-    </div>
+    <canvas id="myChart"></canvas>
   </div>
 </template>
 
@@ -16,5 +14,12 @@ export default {
       weights: jsonData
     }
   },
+  mounted () {
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: this.weights,
+    })
+  }
 }
 </script>
