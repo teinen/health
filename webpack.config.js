@@ -7,8 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist/'),
-    publicPath: './'
+    path: path.join(__dirname, './dist/'),
   },
   module: {
     rules: [
@@ -30,7 +29,7 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist/'),
+    contentBase: path.join(__dirname, './dist/'),
     port: 8080,
   },
   plugins: [
