@@ -18,7 +18,19 @@ export default {
     const ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
       type: 'line',
-      data: this.weights,
+      data: {
+        labels: Object.keys(jsonData),
+        datasets: [{
+            label: "Weights",
+            lineTension: 0.2,
+            backgroundColor: 'rgba(255, 99, 132, 0.3)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            data: Object.values(jsonData),
+        }]
+      },
+      options: {
+
+      }
     })
   }
 }
