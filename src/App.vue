@@ -42,6 +42,7 @@ export default {
         }]
       },
       options: {
+        responsive: true,
         scales: {
           yAxes: [{
             id: "y-axis",
